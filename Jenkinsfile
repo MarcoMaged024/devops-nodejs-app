@@ -1,13 +1,6 @@
 pipeline {
     agent any
 
-    stages {
-        stage('Clone Repo') {
-            steps {
-                git 'https://github.com/MarcoMaged024/devops-nodejs-app.git'
-            }
-        }
-
         stage('Build Docker Image') {
             steps {
                 sh 'docker build -t devops-nodejs-app .'
